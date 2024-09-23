@@ -38,7 +38,7 @@ data "aws_iam_user" "user" {
 
 
 resource "aws_iam_policy" "dynamodb_pol" {
-  name        = "dynamodb_policy"
+  name        = "capstone_dynamodb_policy"
   path        = "/"
   description = "My DynamoDB policy"
 
