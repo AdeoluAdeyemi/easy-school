@@ -149,7 +149,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
 
-resource "aws_key_pair" "deployer" {
-  key_name   = "capstone-key"
-  public_key = file("/home/adeolu/.ssh/capstone_key.pub")
-}
+# resource "aws_key_pair" "deployer" {
+#   key_name   = "capstone-key"
+#   public_key = file("/home/adeolu/.ssh/capstone_key.pub")
+# }
