@@ -1,0 +1,25 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+media/
+.env
+db.sqlite3
+settings.json
+
+# PyCharm
+.idea
+
+static/
+
+infra/.terraform/
+infra/*.terraform
+infra/.terraform.lock.hcl
+infra/.terraform.tfstate
+infra/.terraform.tfstate.backup
+
+# Terraform
+
+*.tfstate
+.terraform/
+*.hcl
