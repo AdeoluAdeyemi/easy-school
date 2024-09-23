@@ -132,6 +132,12 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2.0.1
 
+      - name: Check Dockerfile exist
+        id: check-dockerfile
+        run: |
+          ls -l ./
+          test -f "${{ env.DOCKER_FILE }}" || { echo "No Dockerfile found in $PWD"; exit 1; }
+
       - name: Build, tag, and push image to Amazon ECR
         id: build-publish
         env:
