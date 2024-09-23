@@ -61,7 +61,7 @@
     - name: Deploy docker container
       docker_container:
         name: easy-school
-        image: adeoluadeyemi/easy-school:1.0.2
+        image: adeoluadeyemi/easy-school:1.0.3
         ports:
           - '80:80'
 
