@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
-  BACKEND_S3_BUCKET: capstone-terraform-state-backend
+  BACKEND_S3_BUCKET: capstone-terraform-state
   BACKEND_S3_BUCKET_VERSIONING: Enabled
   BACKEND_DYNAMODB_TABLE: terraform_state
   BACKEND_DYNAMODB_TABLE_HASH_KEY: LockID     
