@@ -1,6 +1,6 @@
 # Set provider
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
 
 module "vpc" {
@@ -17,7 +17,7 @@ module "elb" {
 
 module "ecr" {
   source = "./modules/ecr"
-  prj_capstone_ecr_name = var.ecr_repository_name
+  prj_capstone_ecr_name         = var.aws_ecr_repo_name
   prj_capstone_sg_id            = module.vpc.capstone_security_group_id
   prj_capstone_sub_id           = module.vpc.capstone_subnet_main
   prj_capstone_sub_secondary_id = module.vpc.capstone_subnet_secondary
