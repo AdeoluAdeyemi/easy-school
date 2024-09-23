@@ -101,6 +101,8 @@ resource "aws_vpc_security_group_ingress_rule" "http" {
   to_port           = 80
 }
 
+
+
 resource "aws_vpc_security_group_ingress_rule" "ssh" {
   security_group_id = aws_security_group.tf_sg_main.id
   cidr_ipv4         = "0.0.0.0/0" #aws_vpc.tf_vpc_main.cidr_block
