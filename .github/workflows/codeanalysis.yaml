@@ -9,6 +9,7 @@ on:
 
 jobs:
   quality_analysis:
+    name: Python Linting
     runs-on: ubuntu-latest
 
     steps:
