@@ -2,6 +2,7 @@
 
 resource "aws_ecr_repository" "capstone_ecr_repository" {
   name = var.prj_capstone_ecr_name
+  force_delete = true
 }
 
 resource "aws_ecr_lifecycle_policy" "capstone_ecr_pol" {
