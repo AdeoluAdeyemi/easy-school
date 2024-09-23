@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: easy-school-depl
+  namespace: devops
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: easy-school
+  template:
+    metadata:
+      labels:
+        app: easy-school
+    spec:
+      containers:
+      - name: easy-school-container
+        image: adeoluadeyemi/easy-school:1.0.3
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: easy-school-svc
+  namespace: devops
+spec:
+  selector:
+    app: easy-school
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30080
