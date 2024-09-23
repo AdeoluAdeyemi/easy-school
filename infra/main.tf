@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket = "capstone-terraform-state-backend"
+    key = "terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "terraform_state"
+  }
+}
+
 # Set provider
 provider "aws" {
   region = var.aws_region
